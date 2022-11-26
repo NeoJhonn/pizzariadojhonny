@@ -32,7 +32,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 💻 Projeto
 
-Pizzaria do Jhonny é uma aplicação web onde no index o cliente faz o pedido da pizza e na dashboard o pizzaiolo tem a acesso aos pedidos, podendo atualizar o status e excluir depois de ser efetuada a entrega.gi
+Pizzaria do Jhonny é uma aplicação web onde no index o cliente faz o pedido da pizza e na dashboard o pizzaiolo tem a acesso aos pedidos, podendo atualizar o status e excluir depois de ser efetuada a entrega.
 
 
 ##  Licença
