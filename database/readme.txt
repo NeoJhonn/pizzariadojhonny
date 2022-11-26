@@ -1,0 +1,1 @@
+Import this Database file to your Mysql Server(MySQL Workbench) or via MyPHP Admin in Xampp!!

@@ -1,0 +1,204 @@
+html, body{
+    /*preencher toda a tela*/
+    height: 100%;
+}
+
+h4 {
+    font-size: x-large;
+    display: flex;
+}
+
+h1 {
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 1px 1px 20px 10px whitesmoke;
+}
+
+/* NAVBAR */
+#brand-logo {
+  /*Diminuir o logo da pizza*/  
+  width: 50px;
+}
+
+.navbar.navbar-expand-lg {
+    background-color: #000;
+    font-weight: bold;/*fonte em negrito*/
+}
+
+.navbar.navbar-expand-lg a {
+    color: #fff;/*cor do links*/
+}
+
+/* HOME */
+#main-banner {
+    background-image: url("../assets/pizza-banner.jpg");
+    height: 300px;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    /* subindo a imagem no eixo y(vertical), para mostrar mais a pizza*/
+    background-position-y: -300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#main-banner h1{
+    color:#fff;
+    background-color: #000;
+    text-align: center;
+    padding: 30px;
+    text-transform: uppercase;
+    width: 550px;
+    font-size: 50px;
+}
+
+#main-container {
+    margin-bottom: 100px;/*afastar um pouco do redapé*/
+    padding: 50px 0;
+    text-align: center;
+    min-height: 62%;/*Faz com  que o redapé sempre fique lá no fundo*/
+}
+
+#main-container h2 {
+    margin-bottom: 30px;
+}
+
+.row {
+    /*zerando a margem da classe row do Bootstrap para não quebrar o layout pois ele vem negativa*/
+    margin: 0;
+}
+
+#pizza-form {
+    max-width: 550px;/*largura máxima*/
+    margin: 0 auto;/*margem 0 em cima e em baixo e automática nas laterais, centralizando o conteúdo no centro*/
+    text-align: left;
+}
+
+#pizza-form label{
+    font-weight: bold;
+}
+
+.btn.btn-primary {
+    background-color: #000;
+    border-color: #000;
+}
+
+/*ALERTA*/
+.alert {
+    border-radius: 0;
+    text-align: center;
+    margin-bottom: 0;/*tira a marge de baixo para que fique tudo juntinho*/
+    font-weight: bold;
+    padding: 20px;
+    font-size: 18px;
+}
+
+.alert.alert-success {
+    border: 2px solid #155724;
+}
+
+.alert.alert-warning {
+    border: 2px solid #856404;
+}
+
+.alert p{
+    margin-bottom: 0;/*zerando a margem de baixo para centralizar o parágrafo*/
+}
+
+/*DASHBOARD*/
+.delete-btn, .update-btn {/*tira a borda e a cor de fundo dos botões*/
+    border: none;
+    background-color: transparent;
+}
+
+.delete-btn {/*faz um espaçamento para alinhar o botão delete*/
+    padding: 10px;
+}
+
+.delete-btn i {/*define uma cor e um tamanho para o ícone do botão delete*/
+    color: #721c24;
+    font-size: 20px;
+}
+
+.update-btn {
+    margin-left: 10px;
+}
+
+.update-btn i {/*define uma cor par o ícone do botão update*/
+    color: #004085;
+}
+
+.update-form {
+    display:flex;/*alinha os elemento de uma maneira mais fácil, habilita tais ações*/
+    flex-direction: row;/*alinha os itens em linha*/
+}
+
+.status-input {
+    width: 65%;
+}
+
+.table ul {
+    text-align: left;
+}
+
+/*FOOTER*/
+footer {
+    position: relative;
+    width: 100%;
+    height: 175px;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    align-items: center;/*alinha os itens na vertical*/
+    justify-content: center;/*alinha os itens na horizontal*/
+    font-weight: bold;/*fonte em negrito*/
+}
+
+/*Responsividade*/
+@media(max-width: 425px) {
+    #main-banner {
+        background-position-y: 0;
+    }
+
+    #main-banner h1 {
+        padding: 10px;
+    }
+
+    #main-container {
+        margin-bottom: 0;
+    }
+
+    #main-container .container {
+        padding: 10px;
+    }
+
+    .form-group .btn.btn-primary {
+        width: 100%;
+        height: 50px;
+        margin-top: 15px;
+        text-transform: uppercase;
+    }
+
+    .table-container {
+        padding: 0;
+    }
+
+    .table td, .table td {
+        padding: 0.5rem;
+    }
+
+    th span {
+        display: none;
+    }
+
+    .table thead th:nth-child(5),
+    .table thead th:nth-child(6),
+    .table tbody td:nth-child(5),
+    .table tbody td:nth-child(6) {
+        display: none;
+    }
+
+}
+
+
