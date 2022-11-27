@@ -29,7 +29,7 @@
     $sabores = $data["sabores"];
 
     //Validação de borda, massa e sabores
-    if($borda === "" and $massa === "") {
+    if($borda === "" or $massa === "") {
      
       $_SESSION["msg"] = "Selecione uma borda e uma massa!";
       $_SESSION["status"] = "warning";
