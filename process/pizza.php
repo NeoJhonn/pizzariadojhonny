@@ -24,18 +24,30 @@
   } else if ($method === "POST") {
 
     $data = $_POST;
-
     $borda = $data["borda"];
     $massa = $data["massa"];
     $sabores = $data["sabores"];
 
-    //Validação de sabores máximos
-    if(count($sabores) > 3) {
+    //Validação de borda, massa e sabores
+    if($borda === "" and $massa === "" and $sabores === null) {
+     
+      $_SESSION["msg"] = "Selecione uma borda e uma massa!";
+      $_SESSION["status"] = "warning";
+
+    } else if($sabores === null) {
+
+      $_SESSION["msg"] = "Selecione pelo menos um sabor!";
+      $_SESSION["status"] = "warning";
+    
+
+    } else if(count($sabores) > 3){
 
       $_SESSION["msg"] = "Selecione no máximo 3 sabores!";
       $_SESSION["status"] = "warning";
-
-    } else {
+      
+    }else {
+      
+      
 
       //salvando borda e massa na pizza
       $stmt = $conn->prepare("INSERT INTO pizzas (borda_id, massa_id) VALUES (:borda, :massa)");
@@ -83,9 +95,11 @@
 
 
     }
-
+    
     //Retorna para página inicial
+   
     header("Location: ..");
+   
 
   }
 
